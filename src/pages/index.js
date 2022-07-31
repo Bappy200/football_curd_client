@@ -1,5 +1,6 @@
 import Home from "./Home/Home";
 import NotFound from "./NotFound/NotFound";
-import Players from "../components/Players/Players";
+import PlayerPage from "./PlayerPage/PlayerPage";
+import TeamPage from "./TeamPage/TeamPage";
 
-export {Home, NotFound, Players}
+export {Home, NotFound, PlayerPage, TeamPage}

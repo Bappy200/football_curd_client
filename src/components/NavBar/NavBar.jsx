@@ -7,7 +7,7 @@ function NavBar() {
   return (
     <Navbar className='nav_bar' expand="lg">
       <Container>
-        <Navbar.Brand href="#" className='nav_logo'>PRO FT</Navbar.Brand>
+        <Navbar.Brand href="/" className='nav_logo'>PRO FT</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -17,6 +17,7 @@ function NavBar() {
           >
             <Nav.Link className='nav_item' href="/">Home</Nav.Link>
             <Nav.Link className='nav_item' href="/players">Players</Nav.Link>
+            <Nav.Link className='nav_item' href="/teams">Teams</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,0 +1,7 @@
+.team_details_player_section{
+    width: 100%;
+    background: linear-gradient(to left,rgb(24 25 52), #0b1320);
+    background-attachment: fixed;
+    box-sizing: border-box;
+    padding: 20px 0px;
+}

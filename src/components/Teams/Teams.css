@@ -1,7 +1,6 @@
-.players_container{
+.teams_container{
     width: 100%;
-    background: linear-gradient(to left,rgb(38, 24, 52), #4c2358);
     background-attachment: fixed;
     box-sizing: border-box;
     padding: 50px 0px;
-}       
+} 

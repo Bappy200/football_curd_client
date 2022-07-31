@@ -3,6 +3,7 @@ import {gql} from "@apollo/client"
 const GET_TEAMS = gql`
     query getTeams{
         teams{
+            id
             name
             establish
             totalCost
@@ -12,8 +13,9 @@ const GET_TEAMS = gql`
 `
 
 const GET_TEAM = gql`
-    query getTeam(id: ID!){
+    query getTeam($id: ID!){
         team(id: $id){
+            id
             name
             about
             establish
@@ -30,7 +32,7 @@ const GET_TEAM = gql`
     }
 `
 const  ADD_TEAM = gql`
-    mutation addTeam(name: String!, about: String!, totalCost: Int!, establish: String!, logo: String!, coverImage: String!){
+    mutation addTeam($name: String!, $about: String!, $totalCost: Int!, $establish: String!, $logo: String!, $coverImage: String!){
         addPlayer(name: $name, about: $about, totalCost: $totalCost, establish: $establish, logo: $logo, coverImage: $coverImage){
             name
             about
@@ -42,7 +44,7 @@ const  ADD_TEAM = gql`
 `
 
 const UPDATE_TEAM = gql`
-    mutation updateTeam(id: ID!, name: String!, about: String!, totalCost: Int!, establish: String!, logo: String!, coverImage: String!){
+    mutation updateTeam($id: ID!, $name: String!, $about: String!, $totalCost: Int!, $establish: String!, $logo: String!, $coverImage: String!){
         updateTeam(id: $id, name: $name, about: $about, totalCost: $totalCost, establish: $establish, logo: $logo, coverImage: $coverImage){
             name
             about
@@ -54,7 +56,7 @@ const UPDATE_TEAM = gql`
 `
 
 const DELETE_TEAM = gql`
-    mutation deleteTeam(id: ID!){     
+    mutation deleteTeam($id: ID!){     
         deleteTeam(id: $id){
             name
             salary
